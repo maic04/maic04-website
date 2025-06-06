@@ -1,0 +1,566 @@
+
+
+/* General Body & Reset */
+body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #fce4ec; /* Light pinkish background */
+    color: #333;
+    line-height: 1.6;
+    scroll-behavior: smooth; /* Smooth scrolling for anchor links */
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Playfair Display', serif;
+    color: #880e4f; /* Deep berry color */
+    margin-bottom: 20px;
+}
+
+h1 { font-size: 2.8em; }
+h2 { font-size: 2.2em; }
+h3 { font-size: 1.8em; }
+h4 { font-size: 1.4em; }
+
+p {
+    margin-bottom: 15px;
+}
+
+a {
+    color: #c2185b; /* Vibrant pink for links */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #880e4f; /* Darker berry on hover */
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+
+    padding: 12px 25px;
+    border-radius: 5px;
+    font-weight: 600;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    border: none;
+    text-align: center;
+}
+
+.btn-primary {
+    background-color: #e91e63; /* Primary pink */
+    color: white;
+    box-shadow: 0 4px 8px rgba(233, 30, 99, 0.3);
+}
+
+.btn-primary:hover {
+    background-color: #c2185b; /* Darker pink */
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(233, 30, 99, 0.4);
+}
+
+.btn-secondary {
+    background-color: #ffb300; /* Secondary yellow/orange */
+    color: #333;
+    box-shadow: 0 4px 8px rgba(255, 179, 0, 0.3);
+}
+
+.btn-secondary:hover {
+    background-color: #fb8c00; /* Darker yellow/orange */
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(255, 179, 0, 0.4);
+}
+
+.btn-small {
+    padding: 8px 15px;
+    font-size: 0.8em;
+}
+
+/* Header */
+.main-header {
+    background-color: #fff;
+    padding: 15px 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.main-header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* Allow wrapping on small screens */
+}
+
+.site-title {
+    margin: 0;
+    color: #e91e63; /* Primary pink for title */
+    font-size: 2.5em;
+    letter-spacing: 2px;
+}
+
+.main-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Center nav items on wrap */
+    align-items: center;
+}
+
+.main-nav li {
+    margin-left: 25px;
+    font-weight: 600;
+    color: #555;
+}
+.main-nav li button {
+    margin-left: 0; /* Adjust button margin within li */
+}
+
+
+.main-nav a {
+    color: #555;
+    font-weight: 600;
+    padding: 5px 0;
+    position: relative;
+}
+
+.main-nav a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #e91e63;
+    transition: width 0.3s ease;
+}
+
+.main-nav a:hover::after {
+    width: 100%;
+}
+
+/* Hero Section */
+.hero-section {
+    background: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 240, 245, 0.8)), url('https://via.placeholder.com/1500x500/FFD1DC/FFD1DC?text=Delicious+Cakes+Background') no-repeat center center/cover;
+    text-align: center;
+    padding: 80px 20px;
+    min-height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-section h2 {
+    font-size: 3em;
+    color: #880e4f;
+    margin-bottom: 20px;
+}
+
+.hero-section p {
+    font-size: 1.3em;
+    max-width: 700px;
+    margin: 0 auto 40px auto;
+    color: #555;
+}
+
+.hero-buttons .btn {
+    margin: 10px;
+    min-width: 180px;
+}
+
+/* Section Styling */
+section {
+    padding: 60px 0;
+    text-align: center;
+}
+
+section:nth-of-type(even) {
+    background-color: #fff;
+}
+
+.section-description {
+    font-size: 1.1em;
+    margin-bottom: 40px;
+    color: #666;
+}
+
+/* Form Section (Sign Up / Login) */
+.form-section {
+    background-color: #fdf5e6; /* Creamy background */
+    padding: 60px 0;
+}
+
+.instruction-text {
+    font-size: 1.2em;
+    font-weight: 600;
+    color: #880e4f;
+    margin-bottom: 30px;
+}
+
+.form-card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    margin: 30px auto;
+    max-width: 450px;
+    text-align: left;
+}
+
+.form-card h2 {
+    text-align: center;
+    color: #e91e63;
+    margin-top: 0;
+    margin-bottom: 30px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #555;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="password"],
+.contact-form textarea {
+
+    width: calc(100% - 24px); /* Account for padding */
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-group input:focus,
+.contact-form textarea:focus {
+    border-color: #e91e63;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(233, 30, 99, 0.2);
+}
+
+.form-card button {
+    width: 100%;
+    margin-top: 10px;
+}
+
+.switch-form-text {
+    text-align: center;
+    margin-top: 25px;
+    font-size: 0.95em;
+    color: #777;
+}
+
+/* Bakers Section */
+.bakers-section {
+    background-color: #ffe0b2; /* Light orange/peach */
+}
+
+.bakers-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    padding-top: 20px;
+}
+
+.baker-card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    padding: 25px;
+    text-align: center; /* Center content including image */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.baker-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.baker-profile-img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%; /* Make it round */
+    object-fit: cover;
+    margin-bottom: 15px;
+    border: 3px solid #f8bbd0; /* A nice light pink border */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.baker-card h3 {
+    color: #e91e63;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.baker-card p {
+    font-size: 0.95em;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.baker-card .btn {
+    margin-top: 15px;
+    width: auto;
+    padding: 8px 20px;
+    font-size: 0.9em;
+}
+
+/* Cakes Section (hidden by default) */
+.cakes-section {
+    background-color: #f8bbd0; /* Light pink */
+}
+
+.cakes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    padding-top: 20px;
+}
+
+.cake-card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cake-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.cake-card img {
+    max-width: 100%;
+    height: 180px; /* Fixed height for consistency */
+    object-fit: cover; /* Ensures image covers area without distortion */
+    border-radius: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #eee;
+}
+
+.cake-card h4 {
+    color: #e91e63;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.cake-card p {
+    font-size: 0.9em;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.cake-card .price {
+    font-weight: 700;
+    color: #880e4f;
+    font-size: 1.2em;
+    margin-bottom: 15px;
+}
+
+.cake-card .btn {
+    width: auto;
+    padding: 8px 20px;
+    font-size: 0.9em;
+}
+
+.back-to-bakers {
+    margin-top: 40px;
+}
+
+/* Order Section (hidden by default) */
+.order-section {
+    background-color: #e0f2f7; /* Light blue */
+}
+
+.order-summary-card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    margin: 30px auto;
+    max-width: 500px;
+    text-align: left;
+}
+
+.order-summary-card h3 {
+    text-align: center;
+    color: #880e4f;
+    margin-bottom: 25px;
+}
+
+.order-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px dashed #eee;
+    font-size: 1.1em;
+    color: #555;
+}
+
+.order-item:last-of-type {
+    border-bottom: none;
+}
+
+.order-total {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 0;
+    font-size: 1.4em;
+    font-weight: 700;
+    color: #e91e63;
+    border-top: 2px solid #e91e63;
+    margin-top: 20px;
+}
+
+.order-summary-card .btn {
+    width: 100%;
+
+    margin-top: 30px;
+}
+
+.order-summary-card .note {
+    font-size: 0.85em;
+    color: #999;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.back-to-cakes {
+    margin-top: 40px;
+}
+
+/* Contact Section */
+.contact-section {
+    background-color: #fff8e1; /* Light yellow */
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.contact-form button {
+    width: 100%;
+    margin-top: 20px;
+}
+
+/* Footer */
+.main-footer {
+    background-color: #880e4f; /* Deep berry for footer */
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 0.9em;
+}
+
+/* Utility Class */
+.hidden {
+    display: none;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .main-header .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .site-title {
+        margin-bottom: 15px;
+    }
+
+    .main-nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .main-nav li {
+        margin: 10px 0;
+    }
+
+    .hero-section {
+        padding: 60px 15px;
+    }
+
+    .hero-section h2 {
+        font-size: 2.2em;
+    }
+
+    .hero-section p {
+        font-size: 1em;
+    }
+
+    .hero-buttons {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .btn {
+        width: 80%;
+        margin: 10px auto;
+    }
+
+    section {
+        padding: 40px 0;
+    }
+
+    h1 { font-size: 2.2em; }
+    h2 { font-size: 1.8em; }
+    h3 { font-size: 1.5em; }
+    h4 { font-size: 1.2em; }
+
+    .form-card, .baker-card, .cake-card, .order-summary-card, .contact-form {
+        padding: 20px;
+        margin: 20px auto;
+    }
+
+    .bakers-grid, .cakes-grid {
+        grid-template-columns: 1fr; /* Stack columns on small screens */
+    }
+
+    .cake-card img {
+        height: 160px;
+    }
+}
+
+@media (max-width: 480px) {
+    .site-title {
+        font-size: 2em;
+    }
+
+    .hero-section h2 {
+        font-size: 1.8em;
+    }
+
+    .btn {
+        padding: 10px 20px;
+        font-size: 0.9em;
+    }
+
+    .form-group input, .contact-form textarea {
+        padding: 10px;
+        font-size: 14px;
+    }
+}

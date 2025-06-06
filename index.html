@@ -1,0 +1,176 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CAKE BAKERS - Your Sweet Destination</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts for a nicer look -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="main-header">
+        <div class="container">
+            <h1 class="site-title">CAKE BAKERS</h1>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li id="nav-bakers-link" class="hidden"><a href="#bakers">Our Bakers</a></li>
+                    <li id="nav-signup-login-link"><a href="#signup-login">Join/Login</a></li>
+                    <li id="nav-welcome-message" class="hidden">Welcome, <span id="current-username"></span>!</li>
+                    <li id="nav-logout-button" class="hidden"><button class="btn btn-secondary btn-small">Logout</button></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Home Section -->
+        <section id="home" class="hero-section">
+            <div class="container">
+                <h2>Welcome to CAKE BAKERS!</h2>
+                <p>Find your perfect cake from our community of talented bakers. Register to unlock sweet possibilities!</p>
+                <div class="hero-buttons">
+                    <a href="#signup-form" class="btn btn-primary">Sign Up Now!</a>
+                    <a href="#login-form" class="btn btn-secondary">Already a Member? Login!</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sign Up / Login Section -->
+
+        <section id="signup-login" class="form-section">
+            <div class="container">
+                <p class="instruction-text">To explore our amazing bakers and order delicious cakes, please register or login!</p>
+
+                <!-- Sign Up Form -->
+                <div class="form-card" id="signup-form">
+                    <h2>Sign Up</h2>
+                    <form id="register-form">
+                        <div class="form-group">
+                            <label for="reg-username">Username:</label>
+                            <input type="text" id="reg-username" name="username" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="reg-email">Email:</label>
+                            <input type="email" id="reg-email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="reg-password">Password:</label>
+                            <input type="password" id="reg-password" name="password" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="reg-confirm-password">Confirm Password:</label>
+                            <input type="password" id="reg-confirm-password" name="confirm_password" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Register</button>
+                    </form>
+                    <p class="switch-form-text">Already have an account? <a href="#login-form">Login here.</a></p>
+                </div>
+
+                <!-- Login Form -->
+                <div class="form-card" id="login-form">
+                    <h2>Login</h2>
+                    <form id="login-form-element">
+                        <div class="form-group">
+                            <label for="login-username">Username or Email:</label>
+                            <input type="text" id="login-username" name="username_email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="login-password">Password:</label>
+                            <input type="password" id="login-password" name="password" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Log In</button>
+                    </form>
+                    <p class="switch-form-text">Don't have an account yet? <a href="#signup-form">Sign Up above!</a></p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Bakers List Section (Initially hidden, shown after login) -->
+        <section id="bakers" class="bakers-section hidden">
+            <div class="container">
+                <h2>Our Talented Bakers</h2>
+                <p class="section-description">Browse through our registered bakers. Click "View Cakes" to see their delicious offerings!</p>
+                <div class="bakers-grid" id="bakers-grid">
+                    <!-- Baker cards will be dynamically inserted here by JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Baker's Cakes Display Section (Initially hidden, shown after selecting a baker) -->
+        <section id="baker-cakes-display" class="cakes-section hidden">
+            <div class="container">
+                <h2 id="selected-baker-name">Cakes from [Selected Baker Name]</h2>
+                <p class="section-description">Indulge in these delightful creations. Click "Order Now" to add to your cart.</p>
+                <div class="cakes-grid" id="cakes-grid">
+                    <!-- Cake cards will be dynamically inserted here by JavaScript -->
+                </div>
+
+                <button class="btn btn-secondary back-to-bakers">Back to Bakers</button>
+            </div>
+        </section>
+
+        <!-- Order Verification & Payment (Initially hidden) -->
+        <section id="order-payment" class="order-section hidden">
+            <div class="container">
+                <h2>Verify Your Order & Payment</h2>
+                <p class="section-description">Review your selected cake and proceed to secure payment for delivery.</p>
+
+                <div class="order-summary-card">
+                    <h3>Your Order Summary</h3>
+                    <div class="order-item">
+                        <span class="item-name" id="order-cake-name"></span>
+                        <span class="item-price" id="order-cake-price"></span>
+                    </div>
+                    <div class="order-item">
+                        <span class="item-name">Delivery Fee</span>
+                        <span class="item-price">$5.00</span>
+                    </div>
+                    <div class="order-total">
+                        <span>Total:</span>
+                        <span id="order-total-price"></span>
+                    </div>
+                    <button class="btn btn-primary proceed-payment-btn">Proceed to Payment (Demo)</button>
+                    <p class="note"><em>Note: This is a static demo. No actual payment will be processed.</em></p>
+                </div>
+                <button class="btn btn-secondary back-to-cakes">Back to Cakes</button>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact-section">
+            <div class="container">
+                <h2>Contact Us</h2>
+                <p>Have questions or need support? Reach out to our team!</p>
+                <form action="#" method="post" class="contact-form">
+                    <div class="form-group">
+                        <label for="contact-name">Your Name:</label>
+                        <input type="text" id="contact-name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="contact-email">Your Email:</label>
+                        <input type="email" id="contact-email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="contact-message">Message:</label>
+                        <textarea id="contact-message" name="message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <p>&copy; 2023 CAKE BAKERS. All rights reserved. (Static Demo Site)</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
