@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>UniLink Exchange — Skill Exchange</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="./style.css">
+</head>
+<body>
+	<header class="main-header">
+		<div class="container">
+			<h1 class="site-title">UniLink Exchange</h1>
+			<nav class="main-nav">
+				<ul>
+					<li><a href="./index.html#home">Home</a></li>
+					<li><a href="./resources.html">Resources</a></li>
+					<li><a href="./skills.html">Skill Exchange</a></li>
+					<li><a href="./projects.html">Projects</a></li>
+					<li><a href="./auth.html">Join/Login</a></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+
+	<main>
+		<section class="hero-section">
+			<div class="container">
+				<h2>Learn and teach practical skills</h2>
+				<p>Offer tutoring or hands-on help; request skills you want to learn. Ratings help build trust.</p>
+			</div>
+		</section>
+
+		<section class="info-section">
+			<div class="container">
+				<h3>Offers and Requests</h3>
+				<div class="toolbar" id="filters">
+					<input id="q" placeholder="Search a skill (e.g., Python, Essay)">
+					<select id="kind">
+						<option value="">All</option>
+						<option value="Offer">Offers</option>
+						<option value="Request">Requests</option>
+					</select>
+					<select id="rating">
+						<option value="">Any rating</option>
+						<option value="3">3.0+</option>
+						<option value="4">4.0+</option>
+						<option value="4.5">4.5+</option>
+					</select>
+					<button class="btn btn-primary btn-small" id="apply">Apply</button>
+				</div>
+
+				<button id="toggle-new" class="btn btn-secondary btn-small">New listing</button>
+				<form id="new-form" class="inline-form hidden">
+					<select id="new-kind">
+						<option value="Offer">Offer</option>
+						<option value="Request">Request</option>
+					</select>
+					<input id="new-name" placeholder="e.g., Teach Python basics" required>
+					<input id="new-rating" type="number" step="0.1" min="0" max="5" placeholder="Rating (optional)">
+					<button type="submit" class="btn btn-primary btn-small">Add</button>
+					<span class="muted">Login required to add</span>
+				</form>
+
+				<div class="features-grid" id="skills-list"></div>
+			</div>
+		</section>
+	</main>
+
+	<footer class="main-footer">
+		<div class="container">
+			<p>&copy; 2025 UniLink Exchange</p>
+		</div>
+	</footer>
+
+	<script src="./skills.js"></script>
+</body>
+</html>
