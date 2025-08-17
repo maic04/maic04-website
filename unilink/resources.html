@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>UniLink Exchange — Resources</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="./style.css">
+</head>
+<body>
+	<header class="main-header">
+		<div class="container">
+			<h1 class="site-title">UniLink Exchange</h1>
+			<nav class="main-nav">
+				<ul>
+					<li><a href="./index.html#home">Home</a></li>
+					<li><a href="./resources.html">Resources</a></li>
+					<li><a href="./skills.html">Skill Exchange</a></li>
+					<li><a href="./projects.html">Projects</a></li>
+					<li><a href="./auth.html">Join/Login</a></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+
+	<main>
+		<section class="hero-section">
+			<div class="container">
+				<h2>Resource Marketplace</h2>
+				<p>Find or list textbooks and class notes. Use filters to quickly locate what you need with minimal data usage.</p>
+			</div>
+		</section>
+
+		<section class="info-section">
+			<div class="container">
+				<h3>Latest Listings</h3>
+				<div class="toolbar" id="filters">
+					<input id="q" placeholder="Search title or course (e.g., CSC101, Calculus)">
+					<select id="type">
+						<option value="">All Types</option>
+						<option value="Textbook">Textbooks</option>
+						<option value="Notes">Notes</option>
+					</select>
+					<select id="action">
+						<option value="">Any</option>
+						<option value="Borrow">Borrow</option>
+						<option value="Sell">Sell</option>
+						<option value="Share PDF">Share PDF</option>
+					</select>
+					<button class="btn btn-primary btn-small" id="apply">Apply</button>
+				</div>
+				<div class="features-grid" id="resource-list">
+					<!-- Listings will be added in the next step -->
+				</div>
+			</div>
+		</section>
+	</main>
+
+	<footer class="main-footer">
+		<div class="container">
+			<p>&copy; 2025 UniLink Exchange</p>
+		</div>
+	</footer>
+
+	<script src="./resources.js"></script>
+</body>
+</html>
